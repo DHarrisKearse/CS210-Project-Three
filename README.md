@@ -77,23 +77,81 @@ Onions ***
 * C++ Standard Library documentation: [https://en.cppreference.com/w/](https://en.cppreference.com/w/)
 * Industry best practices for **file I/O, class encapsulation, and menu-driven applications**
 
-## What I Learned
+---
 
-* How to design and implement **modular class-based logic** for tracking and displaying item frequencies.
-* Practical experience using **maps** for frequency counting and data management.
-* Developing **menu-driven programs** with input validation and robust error handling.
-* Importance of **backups and persistent storage** via file output.
-* Hands-on experience using **Git and GitHub** for version control, commits, and remote repository management.
-* Creating **clear documentation** with a README to explain project goals, design decisions, and usage.
+# Project Reflection
 
-## Future Enhancements
+## What problem was the project solving?
 
-* Case-insensitive item searches for improved usability
-* Allow user-defined histogram symbols
-* Real-time updates with new purchases appended to the input file
-* GUI or web interface for store managers
-* Unit testing for frequency calculations and file operations
+The Corner Grocer needed a way to analyze their daily purchase records to understand how frequently items are bought. Without automation, store managers would have to manually count items from transaction records, which would be time-consuming and prone to error.
 
-## Author
+This program solves that problem by reading an input file containing purchased items and calculating the frequency of each item automatically. The data can then be displayed in both list format and histogram format, making it easier for the store to identify popular products and organize the store layout more effectively.
 
-Created as part of **CS 210 – Programming Languages** coursework
+---
+
+## What did you do particularly well?
+
+One aspect I did particularly well in this project was implementing a **modular class-based design**. I created a `GroceryTracker` class that handles all logic related to item tracking, such as reading files, calculating frequencies, displaying lists, generating histograms, and creating backup files.
+
+Separating the class from the main program helped keep the `main()` function focused only on program flow and user interaction. This structure made the program easier to read and maintain while demonstrating good object-oriented programming practices.
+
+I also implemented **clear commenting and whitespace** throughout the code so that each function and logical block of code is easy to understand.
+
+---
+
+## Where could you enhance your code?
+
+One potential improvement would be implementing **case-insensitive searching** so that items such as "apples", "Apples", and "APPLES" would be treated as the same item. This would make the program more robust and prevent inaccurate counts caused by inconsistent input formatting.
+
+Another improvement would be adding **more advanced input validation** and error handling to ensure that the program handles unexpected input more gracefully.
+
+Additionally, the program could be enhanced with a **graphical user interface (GUI)** or web interface so that store employees could interact with the data visually instead of using a console menu.
+
+These improvements would increase the program’s **usability, reliability, and scalability**.
+
+---
+
+## Which pieces of the code were most challenging?
+
+One of the most challenging parts of this project was designing the **data structure used to track item frequencies**. I needed an efficient way to store items and update their counts as the program read through the input file.
+
+I solved this problem by using a **map from the C++ Standard Library**, which allowed each item to be stored as a key with its frequency stored as a value. This made counting items very efficient and simplified the code required to display the results.
+
+Another challenge was organizing the code into **separate files and classes** while keeping everything connected properly. Reviewing course materials and documentation helped me understand how to structure header files, implementation files, and the main program.
+
+Resources that helped me overcome these challenges included:
+
+* zyBooks course materials
+* C++ Standard Library documentation
+* Visual Studio debugging tools
+
+These resources will remain part of my support network for future projects.
+
+---
+
+## What skills from this project are transferable?
+
+Several important programming skills from this project will transfer to future coursework and software development projects:
+
+* **Object-oriented programming using classes**
+* **Modular program design**
+* **File input and output handling**
+* **Using C++ Standard Library data structures such as maps**
+* **Writing clear comments and documentation**
+* **Creating readable and maintainable code**
+
+These skills are fundamental to software development and will be useful in future courses and professional projects.
+
+---
+
+## How did you make the program maintainable, readable, and adaptable?
+
+I made the program maintainable and readable by following several programming best practices.
+
+First, I used **meaningful variable and function names** that clearly describe their purpose. This makes the code easier for other developers to understand.
+
+Second, I separated the program into **multiple files**, including a header file for class declarations, an implementation file for class methods, and a main file for program execution. This modular structure makes the code easier to modify and expand.
+
+Third, I included **detailed comments at the beginning of every function**, describing the purpose of the function, its parameters, and its return values. I also used whitespace to separate logical sections of code.
+
+These design decisions make the program easier to maintain, debug, and expand if additional features are added in the future.
